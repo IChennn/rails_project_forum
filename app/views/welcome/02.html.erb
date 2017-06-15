@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+
+	<title>02</title>
+
+	
+
+
+	<style>
+		a {
+			color: #C4E1FF;   
+			font-size: 18px;
+		}
+		body {
+			text-align: center;
+			font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    		font-weight: 600;
+    		background: url(/assets/sign-in.jpg) no-repeat center center;
+    		background-size: auto;
+    		color: #f8f8f8;
+		}
+		button {
+			margin: 40px;
+			padding: 8px;
+			width: 22%;
+			background-color: transparent;
+			border: 2px #C4E1FF;
+			border-style: solid;
+			border-radius: 4px;
+			color: #C4E1FF;
+			font-size: 15px;
+		}
+
+		form {
+			width:auto;
+			padding: 20px;
+			margin-top: 150px;
+			margin-right: 370px;
+			margin-left: 370px;
+			border: 2px;
+			border-color: #D2E9FF;
+			border-style: solid;
+			border-radius: 4px;
+			background-color: rgba(209, 233, 255, 0.2);
+		}
+		input {
+			padding: 5px;
+			width: 200px;
+		}
+	</style>
+</head>
+<body>
+	<form>
+	<p>Account ID:</p>
+	<input type="text" placeholder="your ID" required>
+	<p>Password:</p>
+	<input type="text" required>
+	<br>
+	<button type="submit">Sign in</button>
+	</form>
+	<br>
+	<span>Create <%= link_to "new account", welcome_newaccount_path %> to continue!</span>
+	<span>Or <%= link_to "cancel to go back", welcome_index_path %></span>
+	</ul>
+</body>
+</html>
