@@ -1,26 +1,32 @@
-<h2>Log in</h2>
+<div class="col-md-4 col-md-offset-4" id="user_page">
+
+<h2 class="text-center">Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
+  
+  <div class="form-group string optional">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
+    <%= (f.email_field :email, autofocus: true, class: "col-md-12")%>
   </div>
-
-  <div class="field">
+  <hr>
+  <div class="form-group string optional">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
+    <%= (f.password_field :password, autocomplete: "off", class: "col-md-12")%>
   </div>
-
+  <hr>
   <% if devise_mapping.rememberable? -%>
-    <div class="field">
+    <div class="form-group string optional">
       <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%=(f.label :remember_me, class: "col-md-12")%>
     </div>
   <% end -%>
-
+  <hr>
+  <hr>
   <div class="actions">
-    <%= f.submit "Log in" %>
+    <%=(f.submit "Log in", class: "btn btn-info btn-block") %>
   </div>
 <% end %>
-
+<br>
 <%= render "devise/shared/links" %>
+
+</div>
