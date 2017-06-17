@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   resources :groups
-  
+
   get 'welcome/index' => "welcome#index"
-  get "welcome/login" => "welcome#02"
-  get "welcome/newaccount" => "welcome#03"
+  get "login" => "welcome#02"
+  get "login/newaccount" => "welcome#03"
   get "reviews" => "groups#index"
 
   root 'welcome#index'
