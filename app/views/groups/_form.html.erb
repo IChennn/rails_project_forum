@@ -1,4 +1,11 @@
 <%= form_for @group do |f| %>
+<% if @group.errors.any? %>
+<ul>
+  <% @group.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+</ul>
+<% end %>
 <div class="form-group">
     <div class="form-group string optional">
         <%= f.label "Title", :class => "string optional control-label" %>
