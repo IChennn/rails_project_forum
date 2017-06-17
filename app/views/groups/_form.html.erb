@@ -10,11 +10,11 @@
     </div>
 </div>
 <div class="row">
-<div class="col-md-2">
+<div class="col-md-3">
 <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
 </div>
 <div class="col-md-4">
-<span class="btn"><%= link_to "Cancel", groups_path %></span>
+<%= link_to("Cancel", groups_path, class: "btn btn-md btn-default")%>
 </div>
 </div>
 <% end %>
