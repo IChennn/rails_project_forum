@@ -5,7 +5,7 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <td>ID</td>
+        <td></td>
         <td>Title</td>
         <td>Description</td>
       </tr>
@@ -13,7 +13,7 @@
     <tbody>
       <% @groups.each do |group| %>
         <tr>
-          <td><%= group_path(group) %></td>
+          <td></td>
           <td><%= link_to(group.title, group_path(group)) %></td>
           <td><%= group.description %></td>
           <td>

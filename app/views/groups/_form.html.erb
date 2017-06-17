@@ -9,6 +9,13 @@
         <%= f.text_area :description, :class => "string optional form-control" %>
     </div>
 </div>
+<div class="row">
+<div class="col-md-2">
 <%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting..." } %>
+</div>
+<div class="col-md-4">
+<span class="btn"><%= link_to "Cancel", groups_path %></span>
+</div>
+</div>
 <% end %>
     

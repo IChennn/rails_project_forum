@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
 
-	<title>02</title>
-
-	
 	<style>
 		a {
 			color: #C4E1FF;   
@@ -25,7 +18,7 @@
 			border-color: #D2E9FF;
 			border-style: solid;
 			border-radius: 4px;
-			margin: 120px 170px 40px 170px;
+			margin: 50px 170px 40px 170px;
 			width:auto;
 			padding: 20px;
 		}
@@ -53,23 +46,23 @@
 			border: none;
 		}
 	</style>
-</head>
-<body>
-	<div id="con">
+
+<div class="col-md-12">
+<div id="con">
 	<form>
-	<p>Account ID:</p>
-	<input type="text" placeholder="your ID" required>
-	<p>Password:</p>
-	<input type="text" required>
-	<p>E-mail:</p>
-	<input type="text" required>
-	<p>Area:</p>
-	<input type="text" placeholder="kyoto city">
-	<br>
-	<button type="submit">Apply now</button>
+		<p>Account ID:</p>
+		<input type="text" placeholder="your ID" required>
+		<p>Password:</p>
+		<input type="text" required>
+		<p>E-mail:</p>
+		<input type="text" required>
+		<p>Area:</p>
+		<input type="text" placeholder="kyoto city">
+		<br>
+		<button type="submit">Apply now</button>
 	</form>	
 	<span>Already have an account? <%= link_to 'Click', login_path %> to sign in! </span>
 	<span>Or <%= link_to "apply later!", welcome_index_path %></span>
-	</div>
-</body>
-</html>
+</div>
+<div class="col-md-12">
+
