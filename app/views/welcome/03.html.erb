@@ -9,7 +9,6 @@
 	<style>
 		a {
 			color: #C4E1FF;   
-			font-size: 18px;
 		}
 		body {
 			text-align: center;
@@ -26,7 +25,7 @@
 			border-color: #D2E9FF;
 			border-style: solid;
 			border-radius: 4px;
-			margin: 70px 170px 40px 170px;
+			margin: 120px 170px 40px 170px;
 			width:auto;
 			padding: 20px;
 		}
@@ -45,9 +44,18 @@
 			padding: 5px;
 			width: 300px;
 		}
+		#con {
+			font-size: 16px;
+		}
+		.navbar {
+			background-color: transparent;
+			color: #C4E1FF;
+			border: none;
+		}
 	</style>
 </head>
 <body>
+	<div id="con">
 	<form>
 	<p>Account ID:</p>
 	<input type="text" placeholder="your ID" required>
@@ -55,12 +63,13 @@
 	<input type="text" required>
 	<p>E-mail:</p>
 	<input type="text" required>
-	<p>Adress:</p>
+	<p>Area:</p>
 	<input type="text" placeholder="kyoto city">
 	<br>
 	<button type="submit">Apply now</button>
 	</form>	
 	<span>Already have an account? <%= link_to 'Click', welcome_login_path %> to sign in! </span>
 	<span>Or <%= link_to "apply later!", welcome_index_path %></span>
+	</div>
 </body>
 </html>

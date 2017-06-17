@@ -11,7 +11,6 @@
 	<style>
 		a {
 			color: #C4E1FF;   
-			font-size: 18px;
 		}
 		body {
 			text-align: center;
@@ -49,9 +48,18 @@
 			padding: 5px;
 			width: 200px;
 		}
+		#con {
+			font-size: 16px;
+		}
+		.navbar {
+			background-color: transparent;
+			color: white;
+			border: none;
+		}
 	</style>
 </head>
 <body>
+	<div id="con">
 	<form>
 	<p>Account ID:</p>
 	<input type="text" placeholder="your ID" required>
@@ -63,6 +71,6 @@
 	<br>
 	<span>Create <%= link_to "new account", welcome_newaccount_path %> to continue!</span>
 	<span>Or <%= link_to "cancel to go back", welcome_index_path %></span>
-	</ul>
+	</div>
 </body>
 </html>
