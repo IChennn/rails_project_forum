@@ -1,0 +1,29 @@
+<div id="rev_con">
+
+<h2 class="text-center">Write some Review!</h2><br>
+
+<div class="col-md-4 col-md-offset-4">
+
+	<% if @post.errors.any? %>
+	<ul>
+  		<% @post.errors.full_messages.each do |msg| %>
+    	<li><%= msg %></li>
+  		<% end %>
+	</ul>
+	<% end %>
+
+  <%= form_for [@group,@post] do |f| %>
+    <div class="form-group">
+      <%= f.text_area :content, :class => "string optional form-control" %>
+    </div>
+	<div class="row">
+		<div class="col-md-3">
+			<%= f.submit "Submit", class: "btn btn-primary", data: { disable_with: "Submitting" } %>
+		</div>
+		<div class="col-md-4">
+			<%= link_to("Cancel", group_path(@group), class: "btn btn-md btn-default")%>
+		</div>
+  	<% end %>
+</div>
+
+</div>

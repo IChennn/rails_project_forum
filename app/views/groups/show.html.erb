@@ -11,6 +11,27 @@
     	<%= link_to("Write a Review", new_group_post_path(@group), class: "btn btn-primary btn-md")%>
     </div>
   </div>
+	<br>
+	<table class="table">
+    <thead>
+      <tr>
+        <th>Reviews</th>
+        <th>Author</th>
+        <th>date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @posts.each do |post| %>
+        <tr>
+          <td><%= post.content %></td>
+          <td><%= post.user.email %></td>
+          <td><%= post.created_at %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
 </div>
+
+
 	

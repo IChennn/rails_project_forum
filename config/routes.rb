@@ -6,8 +6,6 @@ Rails.application.routes.draw do
   end
 
   get 'welcome/index' => "welcome#index"
-  get "login" => "welcome#02"
-  get "login/newaccount" => "welcome#03"
   get "reviews" => "groups#index"
 
   root 'welcome#index'
