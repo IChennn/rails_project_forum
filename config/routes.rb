@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  resources :groups
+  resources :groups do
+    resources :posts
+  end
 
   get 'welcome/index' => "welcome#index"
   get "login" => "welcome#02"

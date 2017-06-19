@@ -1,8 +1,16 @@
 <div class="col-md-12" id="content">
+
   <h2><%= @group.title %></h2>
   <p><%= @group.description %></p>
-  <div class="group">
-    <%= link_to("Edit", edit_group_path(@group), class: "btn btn-primary btn-lg")%>
+
+  <div class="group row">
+	<div class="col-md-1">
+    	<%= link_to("Edit Book", edit_group_path(@group), class: "btn btn-primary btn-md")%>
+    </div>
+    <div class="col-md-1">
+    	<%= link_to("Write a Review", new_group_post_path(@group), class: "btn btn-primary btn-md")%>
+    </div>
   </div>
+
 </div>
 	
