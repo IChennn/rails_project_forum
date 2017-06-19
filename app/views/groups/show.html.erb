@@ -1,7 +1,7 @@
 <div class="col-md-12" id="content">
 
   <h2><%= @group.title %></h2>
-  <p><%= @group.description %></p>
+  <p><%= simple_format(@group.description) %></p>
 
   <div class="group row">
 	<div class="col-md-1">
@@ -26,9 +26,9 @@
     <tbody>
       <% @posts.each do |post| %>
         <tr>
-          <td><%= post.content %></td>
+          <td><%= simple_format(post.content) %></td>
           <td><%= post.user.email %></td>
-          <td><%= post.created_at %></td>
+          <td><%= post.created_at.to_date %></td>
         </tr>
       <% end %>
     </tbody>

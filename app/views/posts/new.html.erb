@@ -4,17 +4,9 @@
 
 <div class="col-md-4 col-md-offset-4">
 
-	<% if @post.errors.any? %>
-	<ul>
-  		<% @post.errors.full_messages.each do |msg| %>
-    	<li><%= msg %></li>
-  		<% end %>
-	</ul>
-	<% end %>
-
-  <%= form_for [@group,@post] do |f| %>
+  <%= simple_form_for [@group,@post] do |f| %>
     <div class="form-group">
-      <%= f.text_area :content, :class => "string optional form-control" %>
+      <%= f.input :content, input_html: {class: "form-control", :rows =>10}%>
     </div>
 	<div class="row">
 		<div class="col-md-3">
