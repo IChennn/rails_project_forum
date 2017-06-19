@@ -3,7 +3,7 @@ class GroupsController < ApplicationController
 	before_action :authenticate_user! , only: [:edit, :update, :new, :destroy]
 
 	def index
-    	@groups = Group.all
+    	@groups = Group.all.order("created_at DESC")
 	end
 	def new
 		@group = Group.new
