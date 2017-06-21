@@ -41,7 +41,7 @@
                     <p class="lead">A special thanks to <a  href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
                 </div>
                 <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="/assets/ipad.png" alt="">
+                    <img class="img-responsive" src="/assets/read.jpg" alt="">
                 </div>
             </div>
 
@@ -112,10 +112,13 @@
                         <li>
                             <%= link_to 'Reviews', reviews_path %>
                         </li>
-                        <li class="footer-menu-divider">&sdot;</li>
+
+                        <% if !current_user %>
+                        <li class="footer-menu-divider">&sdot;</li>                       
                         <li>
                             <%= link_to("Login", new_user_session_path) %>
                         </li>
+                        <% end %>
                     </ul>
                     <p class="copyright text-muted small">Copyright &copy; Online Book Reviews 2017. All Rights Reserved</p>
                 </div>

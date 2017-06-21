@@ -18,7 +18,7 @@ class GroupsController < ApplicationController
  	end
  	def show
  		@group = Group.find(params[:id])
- 		@posts = @group.posts.order("created_at DESC")
+ 		@posts = @group.posts.recent.paginate(:page => params[:page], :per_page => 10)
  	end
  	def edit
  		@group = Group.find(params[:id])
