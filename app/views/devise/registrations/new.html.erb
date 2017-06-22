@@ -7,7 +7,7 @@
 
   <div class="form-group string optional">
     <%= f.label :email %><br />
-    <%=(f.email_field :email, autofocus: true, class: "col-md-12")%>
+    <%=(f.email_field :email, autofocus: true, class: "btn btn-block btn-default col-md-12")%>
   </div>
   <hr>
   <div class="form-group string optional">
@@ -15,12 +15,12 @@
     <% if @validatable %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
     <% end %><br />
-    <%=(f.password_field :password, autocomplete: "off", class: "col-md-12")%>
+    <%=(f.password_field :password, autocomplete: "off", class: "btn btn-block btn-default col-md-12")%>
   </div>
   <hr>
   <div class="form-group string optional">
     <%= f.label :password_confirmation %><br />
-    <%=(f.password_field :password_confirmation, autocomplete: "off", class: "col-md-12")%>
+    <%=(f.password_field :password_confirmation, autocomplete: "off", class: "btn btn-block btn-default col-md-12")%>
   </div>
   <hr>
   <hr>
