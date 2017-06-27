@@ -1,0 +1,31 @@
+<div class="col-md-12" id="review_body">
+  
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <td></td>
+        <td><h4>Title</h4></td>
+        <td><h4>Description</h4></td>
+      </tr>
+    </thead>
+    <tbody>
+      <% @groups.each do |group| %>
+        <tr>
+          <td></td>
+          <td><%= link_to(group.title, group_path(group)) %></td>
+          <td><%= simple_format(group.description) %></td>
+          <td>
+              <% if current_user %>
+                <%= link_to("Edit", edit_group_path(group), class: "btn btn-sm btn-default")%>
+                <%= link_to("Delete", group_path(group),    class: "btn btn-sm btn-default", 
+                          method: :delete, data: { confirm: "Are you sure?" } )%>
+              <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  
+
+</div>
