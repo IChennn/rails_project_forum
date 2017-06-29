@@ -20,14 +20,15 @@
   
 <div class="col-md-12" id="review_body">
   <%= form_tag groups_path, id: "search-form", :method => "get" do %>  
-  <%= text_field_tag :search, params[:search], class: 'btn btn-default', placeholder: "Search Books" %>
-  <%= submit_tag "Search", class: 'btn btn-default', name: nil %>        
+  <%= submit_tag "Search", class: 'btn btn-default pull-right', name: nil %>
+  <%= text_field_tag :search, params[:search], class: 'btn btn-default pull-right', placeholder: "Search Books" %>    
   <% end %>
 </div>
 
+<!--review body-->
 <div class="col-md-12" id="review_body">
   
-  <table class="table table-hover">
+  <!-- <table class="table table-hover">
     <thead>
       <tr>
         <td></td>
@@ -36,22 +37,44 @@
       </tr>
     </thead>
     <tbody>
-      <% @groups.each do |group| %>
+      < % @groups.each do |group| %>
         <tr>
           <td></td>
-          <td><%= link_to(group.title, group_path(group)) %></td>
-          <td><%= simple_format(group.description) %></td>
+          <td>< %= link_to(group.title, group_path(group)) %></td>
+          <td>< %= simple_format(group.description) %></td>
           <td>
-              <% if current_user %>
-                <%= link_to("Edit", edit_group_path(group), class: "btn btn-sm btn-default")%>
-                <%= link_to("Delete", group_path(group),    class: "btn btn-sm btn-default", 
+              < % if current_user %>
+                < %= link_to("Edit", edit_group_path(group), class: "btn btn-sm btn-default")%>
+                < %= link_to("Delete", group_path(group),    class: "btn btn-sm btn-default", 
                           method: :delete, data: { confirm: "Are you sure?" } )%>
-              <% end %>
+              < % end %>
           </td>
         </tr>
-      <% end %>
+      < % end %>
     </tbody>
-  </table>
+  </table> -->
+
+  <% @groups.each do |group| %>
+      <div class="row">
+            <div class="col-md-5">
+                <a href="#">
+                    <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/400x400" alt="">
+                </a>
+            </div>
+            <div class="col-md-7">
+                <h3 class="text-primary"><%= group.title %></h3>
+                <hr>
+                <p><%= simple_format(group.description) %></p>
+                <% if current_user %>
+                <%= link_to("Edit", edit_group_path(group), class: "btn btn-md btn-default")%>
+                <%= link_to("Delete", group_path(group),    class: "btn btn-md btn-default", 
+                          method: :delete, data: { confirm: "Are you sure?" } )%>
+                <% end %>
+                <%= link_to("See More Reviews >>", group_path(group),class: "btn btn-md btn-primary") %>
+            </div>
+      </div>
+      <hr>
+  <% end %>
 
   <div class="text-center">
     <%= will_paginate @groups %>

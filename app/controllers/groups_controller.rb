@@ -4,9 +4,9 @@ class GroupsController < ApplicationController
 
 	def index
     if params[:search]
-      @groups = Group.search(params[:search]).recent.paginate(:page => params[:page], :per_page => 10)
+      @groups = Group.search(params[:search]).recent.paginate(:page => params[:page], :per_page => 5)
     else 
-    	@groups = Group.all.recent.paginate(:page => params[:page], :per_page => 10)
+    	@groups = Group.all.recent.paginate(:page => params[:page], :per_page => 5)
     end
 	end
 
