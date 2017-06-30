@@ -30,6 +30,10 @@ gem "simple_form"
 
 gem "will_paginate"
 
+gem 'carrierwave'
+gem 'rmagick'
+gem 'mini_magick'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

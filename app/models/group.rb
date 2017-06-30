@@ -1,7 +1,8 @@
 class Group < ActiveRecord::Base
 	belongs_to :user
-  	has_many :posts
+  has_many :posts
 	validates :title, presence: true
+  mount_uploader :image, ImageUploader
 
 	scope :recent, -> {order("created_at DESC")}
 

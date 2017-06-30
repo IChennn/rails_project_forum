@@ -3,6 +3,7 @@
 <div class="form-group">
     <%= f.input :title, input_html: { class: "form-control"} %>
     <%= f.input :description, input_html: { class: "form-control", :rows => 4} %>
+    <%= f.file_field :image %>
 </div>
 <div class="row">
 <div class="col-md-3">
@@ -16,11 +17,11 @@
 
 
 <!--something that do not need, but keep for ref
-<% if @group.errors.any? %>
+< % if @group.errors.any? %>
 <ul>
-  <% @group.errors.full_messages.each do |msg| %>
-    <li><%= msg %></li>
-  <% end %>
+  < % @group.errors.full_messages.each do |msg| %>
+    <li>< %= msg %></li>
+  < % end %>
 </ul>
-<% end %>
+< % end %>
 -->    
