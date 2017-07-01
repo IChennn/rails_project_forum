@@ -1,5 +1,5 @@
 CarrierWave.configure do |config|
-  if Rails.env.production? or Rails.env.development?
+  #if Rails.env.production? or Rails.env.development?
     config.storage :fog                       
     config.fog_credentials = {
       provider:              'AWS',                        
@@ -14,10 +14,10 @@ CarrierWave.configure do |config|
 
     }
     config.fog_directory  = ENV["aws_bucket_name"] 
+    config.cache_dir = "#{Rails.root}/tmp/uploads"
 
 
-
-  else
-    config.storage :file
-  end
+  # else
+  #   config.storage :file
+  # end
 end
