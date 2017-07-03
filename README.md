@@ -1,6 +1,6 @@
 # Rails project–– Online Book Review
 
-### Environment:
+### Environment
 
 Rails 4.2.1
 
@@ -40,5 +40,6 @@ https://gentle-inlet-97986.herokuapp.com/
 
 * User function (login, registration)  → devise
 * Paginate  → will_paginate
+* Picture uploader  →  CarrierWave + MiniMagick 
 * Picture storage  → AWS S3
 * Deploy  →  Heroku
